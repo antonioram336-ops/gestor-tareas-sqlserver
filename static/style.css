@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+    color: #1F2937;
+    min-height: 100vh;
+}
+
+.app-shell {
+    padding: 30px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.encabezado h1 {
+    color: #4F46E5;
+    margin-bottom: 8px;
+    font-size: 34px;
+}
+
+.subtitulo {
+    color: #6B7280;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    border-radius: 18px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    margin-top: 0;
+}
+
+.total {
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+}
+
+.pendientes {
+    background: linear-gradient(135deg, #F59E0B, #F97316);
+}
+
+.completadas {
+    background: linear-gradient(135deg, #10B981, #34D399);
+}
+
+h2 {
+    text-align: center;
+    margin: 25px 0 15px;
+    color: #7C3AED;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+input,
+textarea {
+    padding: 12px 14px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    background-color: #F9FAFB;
+    color: #1F2937;
+    width: 100%;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6366F1;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(90deg, #6366F1, #8B5CF6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.lista-tareas {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-tareas li {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid #E5E7EB;
+    padding: 18px;
+    margin-bottom: 14px;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+.tarea-contenido strong {
+    display: block;
+    font-size: 18px;
+    color: #312E81;
+    margin-bottom: 6px;
+}
+
+.tarea-contenido span {
+    color: #6B7280;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.completada {
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border-left: 6px solid #10B981;
+    opacity: 0.96;
+}
+
+.completada .tarea-contenido strong,
+.completada .tarea-contenido span {
+    text-decoration: line-through;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+.completar {
+    background: linear-gradient(90deg, #10B981, #34D399);
+}
+
+.editar {
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+}
+
+.eliminar {
+    background: linear-gradient(90deg, #EF4444, #F87171);
+}
+
+.volver {
+    background: linear-gradient(90deg, #6B7280, #9CA3AF);
+}
+
+p {
+    text-align: center;
+    color: #6B7280;
+    margin-top: 15px;
+}
+
+.centrado {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    .encabezado h1 {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="stats">
+    <div class="stat-card total">
+        <h3>Total</h3>
+        <p>{{ total }}</p>
+    </div>
+
+    <div class="stat-card pendientes">
+        <h3>Pendientes</h3>
+        <p>{{ pendientes }}</p>
+    </div>
+
+    <div class="stat-card completadas">
+        <h3>Completadas</h3>
+        <p>{{ completadas }}</p>
+    </div>
+</div>
+
+<form action="/agregar" method="POST" class="formulario">
+    <input type="text" name="titulo" placeholder="Título de la tarea" required>
+    <textarea name="descripcion" placeholder="Descripción de la tarea"></textarea>
+    <button type="submit">Agregar tarea</button>
+</form>
+
+<h2>Lista de tareas</h2>
+
+{% if tareas %}
+<ul class="lista-tareas">
+    {% for tarea in tareas %}
+    <li class="{% if tarea.completada %}completada{% endif %}">
+        <div class="tarea-contenido">
+            <strong>{{ tarea.titulo }}</strong>
+            <span>{{ tarea.descripcion }}</span>
+        </div>
+
+        <div class="acciones">
+            {% if not tarea.completada %}
+            <a href="/completar/{{ tarea.id }}" class="btn completar">Completar</a>
+            {% endif %}
+
+            <a href="/editar/{{ tarea.id }}" class="btn editar">Modificar</a>
+            <a href="/eliminar/{{ tarea.id }}" class="btn eliminar">Eliminar</a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hay tareas registradas.</p>
+{% endif %}
+
+{% endblock %}
