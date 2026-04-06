@@ -16,6 +16,10 @@ Aplicación web CRUD desarrollada con Python, Flask, HTML, CSS y SQL Server.
 - SQL Server
 - pyodbc
 
+  ## Vista previa
+
+![App](screenshot.png)
+
 ## Cómo ejecutar
 1. Crear la base de datos en SQL Server.
 2. Instalar dependencias:
